@@ -39,7 +39,7 @@ TestCloud/
 .vs/
 project.lock.json
 
-tools/
+tools/*
 !tools/packages.config
 .nugetapikey
 .mygetapikey
