@@ -250,7 +250,7 @@ namespace ZXing.Mobile.CameraAccess
                 // This should help maximize performance / support for hardware
                 foreach (var fpsRange in parameters.SupportedPreviewFpsRange)
                 {
-                    if (fpsRange[0] <= selectedFps[0] && fpsRange[1] > selectedFps[1])
+                    if (fpsRange[1] - fpsRange[0] > selectedFps[1] - selectedFps[0])
                         selectedFps = fpsRange;
                 }
                 parameters.SetPreviewFpsRange(selectedFps[0], selectedFps[1]);
